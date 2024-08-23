@@ -1,13 +1,8 @@
 # Sample Hardhat Project
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+This project a part of CCIP bootcamp, especially day 3.
 
-Try running some of the following tasks:
+To find out the use of gas by `ccipReceive` function i use Tenderly Dashboard
+https://dashboard.tenderly.co/tx/sepolia/0x45d7eb015f1805e476a344c881f188a8fce01a4da7ec47d9510e93884d5cabb0/debugger?trace=0.0.0.7.0.0.2
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.ts
-```
+After looking I found that ccip message used 162300 gas amount, so i increase gasLimit in 10% to 178000
